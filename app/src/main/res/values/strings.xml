@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MoesTrip</string>
     <string name="headline">Spesial Dipersembahkan Untuk \nDicoding dan Indonesia</string>
-    <string name="nama_museum">Nama Museum</string>
-    <string name="address">address</string>
+    <string name="nama_museum">Museum Satria Mandala Jakarta</string>
+    <string name="address">Jl. Medan Merdeka Barat 12 No.10 A Jakarta Pusat</string>
+    <string name="rute_tj">-</string>
 </resources>

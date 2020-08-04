@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueYoung"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/iv_poster"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/museum_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/menus_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="348dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/shape_bg_detail"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+       <androidx.core.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:paddingTop="16dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="8dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="37dp"
+                        android:src="@drawable/box_desc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/nama_museum"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:drawableStart="@drawable/pin_maps_small"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/address"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shape_btn_fav"
+                    android:padding="11dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_favorite_border_pink_24dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Museum Nasional Republik Indonesia
+                            atau Museum Gajah, adalah sebuah
+                            museum arkeologi, sejarah, etnografi,
+                            dan geografi.
+
+                            \n\nMuseum Gajah banyak mengoleksi
+                            benda-benda kuno dari seluruh Nusantara.
+
+                            \n\nMuseum Nasional Republik Indonesia
+                            atau Museum Gajah, adalah sebuah
+                            museum arkeologi, sejarah, etnografi,
+                            dan geografi.
+
+                            \n\nMuseum Gajah banyak mengoleksi
+                            benda-benda kuno dari seluruh Nusantara.
+
+
+                            \n\nMuseum Gajah banyak mengoleksi
+                            benda-benda kuno dari seluruh Nusantara."
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/transit_box" />
+
+            <LinearLayout
+                android:layout_width="258dp"
+                android:layout_height="164dp"
+                android:background="@drawable/shape_box_transit"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="4dp"
+                android:paddingLeft="4dp">
+
+                <TextView
+                    android:id="@+id/tv_transjakarta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:drawableStart="@drawable/tj_logo"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="-"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_krl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/commuter"
+                    android:drawablePadding="11dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="-"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_kereta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/kai_logo"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="-"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_mrt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/mrt_logo"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="-"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+           </LinearLayout>
+
+       </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
