@@ -20,17 +20,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar.">
         <activity android:name=".AboutActivity">
+
+        </activity>
+        <activity android:name=".DetailActivity">
+
+        </activity>
+        <activity android:name=".GetStartedActivity" />
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailActivity">
-
-        </activity>
-        <activity android:name=".GetStartedActivity" />
-        <activity android:name=".SplashScreenActivity"></activity>
         <activity android:name=".MainActivity" />
     </application>
 
