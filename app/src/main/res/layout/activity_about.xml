@@ -43,6 +43,7 @@
         android:background="@drawable/shape_bg_about">
 
         <ImageView
+            android:id="@+id/iv_profpict"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
@@ -50,6 +51,7 @@
             android:src="@drawable/profpict"/>
 
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Willy Saputra"
@@ -60,6 +62,7 @@
             android:layout_marginTop="8dp"/>
 
         <TextView
+            android:id="@+id/tv_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="saputrawilly26@gmail.com"
@@ -70,6 +73,7 @@
             android:layout_marginTop="2dp"/>
         
         <ImageView
+            android:id="@+id/iv_source"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:src="@drawable/source_box"
@@ -77,6 +81,7 @@
             android:layout_marginTop="40dp"/>
 
         <TextView
+            android:id="@+id/tv_source"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/source"
