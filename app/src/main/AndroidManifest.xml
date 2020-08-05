@@ -19,17 +19,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar.">
-        <activity android:name=".DetailActivity">
+        <activity android:name=".AboutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GetStartedActivity"></activity>
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".DetailActivity">
 
         </activity>
+        <activity android:name=".GetStartedActivity" />
+        <activity android:name=".SplashScreenActivity"></activity>
         <activity android:name=".MainActivity" />
     </application>
 
