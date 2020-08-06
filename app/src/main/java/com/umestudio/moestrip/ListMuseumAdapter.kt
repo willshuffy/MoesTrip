@@ -1,5 +1,6 @@
 package com.umestudio.moestrip
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,16 +23,30 @@ class ListMuseumAdapter(private val listMuseum: ArrayList<Museum>) : RecyclerVie
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val museum = listMuseum[position]
+            val (name, address, detail,transjakarta,commuterline, trainstation, mrtstation, photo) = listMuseum[position]
 
+        holder.tvName.text = name
+        holder.tvAddress.text = address
         Glide.with(holder.itemView.context)
-            .load(museum.photo)
+            .load(photo)
             .apply(RequestOptions().override(64,64))
             .into(holder.imgPhoto)
 
+        val mContext = holder.itemView.context
 
-        holder.tvName.text = museum.name
-        holder.tvAddress.text = museum.address
+        holder.itemView.setOnClickListener {
+            val intentDetail = Intent(mContext, DetailActivity::class.java)
+            intentDetail.putExtra(DetailActivity.EXTRA_NAME, name)
+            intentDetail.putExtra(DetailActivity.EXTRA_ADDRESS, address)
+            intentDetail.putExtra(DetailActivity.EXTRA_DESC, detail)
+
+            intentDetail.putExtra(DetailActivity.EXTRA_TRANSJAKARTA, transjakarta)
+            intentDetail.putExtra(DetailActivity.EXTRA_COMMUTER, commuterline)
+            intentDetail.putExtra(DetailActivity.EXTRA_TRAIN, trainstation)
+            intentDetail.putExtra(DetailActivity.EXTRA_MRT, mrtstation)
+            intentDetail.putExtra(DetailActivity.EXTRA_PHOTO, photo)
+            mContext.startActivity(intentDetail)
+        }
     }
 
     inner class ListViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {

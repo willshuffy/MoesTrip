@@ -1,5 +1,6 @@
 package com.umestudio.moestrip
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         rvMuseums = findViewById(R.id.rv_museum)
         rvMuseums.setHasFixedSize(true)
 
-        list.addAll(MuseumsData.listData)
+        list.addAll(MuseumData.listData)
         showRecyclerList()
     }
 

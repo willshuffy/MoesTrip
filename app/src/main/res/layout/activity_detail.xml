@@ -82,6 +82,7 @@
                         android:src="@drawable/box_desc" />
 
                     <TextView
+                        android:id="@+id/tv_nama_museum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_bold"
@@ -90,6 +91,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_address_museum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -156,10 +158,10 @@
 
             <LinearLayout
                 android:layout_width="258dp"
-                android:layout_height="164dp"
+                android:layout_height="180dp"
                 android:background="@drawable/shape_box_transit"
                 android:orientation="vertical"
-                android:paddingTop="8dp"
+                android:paddingTop="14dp"
                 android:paddingBottom="8dp"
                 android:paddingRight="4dp"
                 android:paddingLeft="4dp">
