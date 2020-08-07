@@ -5,4 +5,7 @@
     <string name="address">Jl. Medan Merdeka Barat 12 No.10 A Jakarta Pusat</string>
     <string name="rute_tj">-</string>
     <string name="source">dicoding.com  |  id.wikipedia.org  |  setneg.go.id  | news.detik.com                           \nunsplash.com  |  dribbble.com  |  flaticon.com                           \ndowlogo.com  |  seeklogo.com</string>
+    <string name="favorite">Favorite</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
 </resources>

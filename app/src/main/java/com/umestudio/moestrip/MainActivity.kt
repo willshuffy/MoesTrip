@@ -3,8 +3,13 @@ package com.umestudio.moestrip
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvMuseums: RecyclerView
@@ -19,11 +24,37 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(MuseumData.listData)
         showRecyclerList()
+
+        iv_menus.setOnClickListener {
+            showPopUp(iv_menus)
+        }
     }
 
     private fun showRecyclerList() {
         rvMuseums.layoutManager = LinearLayoutManager(this)
         val listMuseumAdapter = ListMuseumAdapter(list)
         rvMuseums.adapter = listMuseumAdapter
+    }
+
+    private fun showPopUp(view: View){
+
+        val popup = PopupMenu(this, view)
+        popup.inflate(R.menu.menu_main)
+
+        popup.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item: MenuItem? ->
+
+            when (item!!.itemId){
+                R.id.action_favorite -> {
+                }
+                R.id.action_about -> {
+                    val intent = Intent(this@MainActivity, AboutActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.action_exit -> {
+                }
+            }
+            true
+        })
+        popup.show()
     }
 }

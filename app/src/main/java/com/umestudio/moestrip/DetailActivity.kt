@@ -1,11 +1,16 @@
 package com.umestudio.moestrip
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
+import android.widget.PopupMenu
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import kotlinx.android.synthetic.main.activity_detail.*
 
 class DetailActivity : AppCompatActivity() {
 
@@ -58,10 +63,40 @@ class DetailActivity : AppCompatActivity() {
         tvCommuter.text = getCommuter
         tvTrain.text = getTrain
         tvMrt.text = getMrt
+
+        iv_menu.setOnClickListener {
+            showPopUp(iv_menu)
+        }
+
+        iv_back.setOnClickListener {
+            finish()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun showPopUp(view: View){
+
+        val popup = PopupMenu(this, view)
+        popup.inflate(R.menu.menu_main)
+
+        popup.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item: MenuItem? ->
+
+            when (item!!.itemId){
+                R.id.action_favorite -> {
+                }
+                R.id.action_about -> {
+                    val intent = Intent(this@DetailActivity, AboutActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.action_exit -> {
+                }
+            }
+            true
+        })
+        popup.show()
     }
 }
