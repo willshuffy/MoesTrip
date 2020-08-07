@@ -8,4 +8,7 @@
     <string name="favorite">Favorite</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
+    <string name="yakin__keluar">Anda yakin ingin keluar ?</string>
+    <string name="iya">Iya</string>
+    <string name="tidak">Tidak</string>
 </resources>

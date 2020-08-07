@@ -1,16 +1,20 @@
-package com.umestudio.moestrip
+package com.umestudio.moestrip.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.umestudio.moestrip.R
 import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.android.synthetic.main.logout_dialog.view.*
 
 class DetailActivity : AppCompatActivity() {
 
@@ -73,10 +77,6 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
 
     private fun showPopUp(view: View){
 
@@ -93,10 +93,33 @@ class DetailActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.action_exit -> {
+
+                    val view = LayoutInflater.from(this).inflate(R.layout.logout_dialog, null)
+                    val alert = AlertDialog.Builder(this,
+                        R.style.CustomAlertDialog
+                    )
+                        .setView(view)
+                        .setCancelable(false)
+
+                    val mAlertDialog = alert.show()
+                    mAlertDialog?.window?.setLayout(700, 500)
+
+                    view.btn_iya.setOnClickListener {
+                        finishAffinity()
+                    }
+                    view.btn_tidak.setOnClickListener {
+                        mAlertDialog.dismiss()
+                    }
+
                 }
             }
             true
         })
         popup.show()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

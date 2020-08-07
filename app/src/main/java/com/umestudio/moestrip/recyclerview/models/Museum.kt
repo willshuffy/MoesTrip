@@ -1,4 +1,4 @@
-package com.umestudio.moestrip
+package com.umestudio.moestrip.recyclerview.models
 
 import android.os.Parcel
 import android.os.Parcelable

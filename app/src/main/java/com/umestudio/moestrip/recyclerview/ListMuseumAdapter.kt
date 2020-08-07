@@ -1,4 +1,4 @@
-package com.umestudio.moestrip
+package com.umestudio.moestrip.recyclerview
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,6 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.umestudio.moestrip.view.DetailActivity
+import com.umestudio.moestrip.recyclerview.models.Museum
+import com.umestudio.moestrip.R
 
 class ListMuseumAdapter(private val listMuseum: ArrayList<Museum>) : RecyclerView.Adapter<ListMuseumAdapter.ListViewHolder>() {
 
