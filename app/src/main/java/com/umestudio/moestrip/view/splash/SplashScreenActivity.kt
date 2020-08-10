@@ -38,6 +38,6 @@ class SplashScreenActivity : AppCompatActivity() {
                 GetStartedActivity::class.java)
             startActivity(intent)
             finish()
-        }, 8000)
+        }, 7000)
     }
 }

@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
         popup.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item: MenuItem? ->
 
             when (item!!.itemId) {
-                R.id.action_favorite -> {
-                }
+               /* R.id.action_favorite -> {
+                }*/
                 R.id.action_about -> {
                     val intent = Intent(this@MainActivity, AboutActivity::class.java)
                     startActivity(intent)
